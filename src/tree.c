@@ -77,7 +77,13 @@ void print_array(map *letters, tree *t)
   insertion_sort(letters);
   printf("Char\t|\tFreq\t|\tCode\n");
   for (size_t i = 0; i < letters->size; i++)
-    printf("%c\t|\t%d\t|\t%s\n", letters->vect[i].c, letters->vect[i].occ, find(t, letters->vect[i].c));
+  {
+    if (letters->vect[i].c == ' ')
+      printf("' '");
+    else
+      printf("%c", letters->vect[i].c);
+    printf("\t|\t%d\t|\t%s\n", letters->vect[i].occ, find(t, letters->vect[i].c));
+  }
 }
 
 void decode(char *sent, tree *t)

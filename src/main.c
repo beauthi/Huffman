@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
   FILE *f = fopen(argv[1], "r");
   if (!f)
   {
-    fprintf(stderr, "%s : No such file or directory", argv[1]);
+    fprintf(stderr, "%s : No such file or directory\n", argv[1]);
     exit(1);
   }
   map *letters = malloc(sizeof (map));
