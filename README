@@ -1,0 +1,22 @@
+### README ###
+
+This project is the application of a Huffman coding.
+
+According to the Huffman coding, the characters that are the most frequent in the input
+are the ones that have the shortest huffman code.
+This gives a Huffman tree, a binary tree where the left son is attributed the number 0
+and the right one has the code 1.
+
+How to build a Huffman tree ?
+
+Order the frequencies of characters in ascending order. Then take the two first ones
+(the least frequent ones), they are now the two children of a node which value is the
+sum of the left and right trees' frequencies.
+
+Check the wikipedia page for more information :
+https://en.wikipedia.org/wiki/Huffman_coding
+
+How to use this project ?
+
+> make
+> ./huffman file
